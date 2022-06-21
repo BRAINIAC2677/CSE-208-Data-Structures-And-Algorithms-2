@@ -1,0 +1,12 @@
+Philadelphia is eliminated.
+They can win at most 80 + 3 = 83 games.
+Atlanta and New_York have already won a total of 161 games.
+They play each other 6 times.
+So on average, each of the team wins 167/2 = 83.5 games.
+
+Montreal is eliminated.
+They can win at most 77 + 3 = 80 games.
+Atlanta, Philadelphia and New_York have already won a total of 241 games.
+They play each other 7 times.
+So on average, each of the team wins 248/3 = 82.6667 games.
+
