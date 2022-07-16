@@ -1,5 +1,8 @@
 #include "fibonacci_heap.h"
 #include "binary_heap.h"
+using binary_heap::BinaryHeap;
+using fibonacci_heap::FibonacciHeap;
+using fibonacci_heap::Node;
 
 #include <bits/stdc++.h>
 #include <experimental/random>
@@ -126,8 +129,16 @@ bool testDelete(FibonacciHeap<T> *fh, int iterations = 1000, T lowest = INT_MIN)
 
 int main()
 {
-    fibonacci_heap::PriorityQueue<pair<int, int>> fpq;
-    binary_heap::PriorityQueue<pair<int, int>> bpq;
-    // testing code
+    fibonacci_heap::PriorityQueue<int, greater<int>> fpq;
+    binary_heap::PriorityQueue<int, greater<int>> bpq;
+
+    fpq.push(1);
+    fpq.push(10);
+    while (!fpq.empty())
+    {
+        cout << fpq.top() << " ";
+        fpq.pop();
+    }
+
     return 0;
 }

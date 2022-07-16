@@ -12,6 +12,9 @@
   - [Floyd-Warshall Algorithm](/w-5/offline/floyd_warshall.cpp)
 - Max Flow
   - [Baseball Elimination Problem](/w-6/offline/baseball_elimination.cpp)
+- Heap
+  - [Fibonacci Heap](/w-8/offline/fibonacci_heap.h)
+  - [Binary Heap](/w-8/offline/binary_heap.h)
 
 
 ## Relevant QnA:
