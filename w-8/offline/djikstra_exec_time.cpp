@@ -70,8 +70,8 @@ void binDjikstra(int root)
 
 int main()
 {
-    ifstream in1("input1.txt");
-    ofstream out("output.csv");
+    ifstream in1("directed_weighted_graph.txt");
+    ofstream out("exec_time.csv");
     in1 >> n >> m;
     adj.assign(n + 1, vector<pair<long long int, int>>());
     for (int i = 0; i < m; i++)
@@ -84,7 +84,7 @@ int main()
         // directed graph
         adj[u].push_back({w, v});
     }
-    ifstream in2("input2.txt");
+    ifstream in2("source_destination.txt");
     out << "Path Length, Path Cost,Binary Heap Execution Time(ms), Fibonacci Heap Execution Time(ms)\n";
     int k;
     in2 >> k;
