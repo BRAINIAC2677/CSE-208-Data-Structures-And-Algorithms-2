@@ -1,17 +1,4 @@
-/*
-Author: Asif Azad
-Creation Date: 16.07.2022
-Last Modified: 16.07.2022
-
-Fibonacci heap for any key values. Priority queue implented using fibonacci heap.
-*/
-
-#ifndef FIBONACCI_HEAP
-#define FIBONACCI_HEAP
-
-#include <cassert>
-#include <vector>
-#include <cmath>
+#include <bits/stdc++.h>
 using namespace std;
 
 namespace fibonacci_heap
@@ -480,4 +467,65 @@ namespace fibonacci_heap
     }
     /*========================== end: PriorityQueue class ========================*/
 }
-#endif
+
+int n, m;
+const long long int inf = 1000000000000000000;
+vector<vector<pair<long long int, int>>> adj;
+vector<long long int> path_cost, path_len;
+vector<int> par;
+
+void fibDjikstra(int root)
+{
+    path_cost.assign(n + 1, inf);
+    path_len.assign(n + 1, inf);
+    par.assign(n + 1, -1);
+    path_cost[root] = 0;
+    path_len[root] = 0;
+    fibonacci_heap::PriorityQueue<pair<long long int, int>> pq;
+    pq.push({path_cost[root], root});
+    while (!pq.empty())
+    {
+        auto cur = pq.top();
+        pq.pop();
+        int u = cur.second;
+        if (cur.first != path_cost[u])
+        {
+            continue;
+        }
+        for (auto next : adj[u])
+        {
+            int v = next.second;
+            long long int w = next.first;
+            if (path_cost[u] + w < path_cost[v])
+            {
+                path_cost[v] = path_cost[u] + w;
+                path_len[v] = path_len[u] + 1;
+                par[v] = u;
+                pq.push({path_cost[v], v});
+            }
+        }
+    }
+}
+
+// problem link: https://cses.fi/problemset/task/1671/
+int main()
+{
+    cin >> n >> m;
+    adj.assign(n + 1, vector<pair<long long int, int>>());
+    for (int i = 0; i < m; i++)
+    {
+        int u, v;
+        long long int w;
+        cin >> u >> v >> w;
+        u--;
+        v--;
+        // directed graph
+        adj[u].push_back({w, v});
+    }
+    fibDjikstra(0);
+    for (int i = 0; i < n; i++)
+    {
+        cout << path_cost[i] << " \n"[i == n - 1];
+    }
+    return 0;
+}

@@ -12,3 +12,7 @@
   - [Floyd-Warshall Algorithm](/w-5/offline/floyd_warshall.cpp)
 - Max Flow
   - [Baseball Elimination Problem](/w-6/offline/baseball_elimination.cpp)
+
+
+## Relevant QnA:
+ - [declaring a priority_queue in c++ with a custom comparator](https://stackoverflow.com/a/16111402/13148347)
