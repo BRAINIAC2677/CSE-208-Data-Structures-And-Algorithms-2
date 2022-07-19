@@ -25,7 +25,7 @@ namespace binary_heap
         bool operator()(T a, T b)
         {
             // a has more priority than b
-            return a > b;
+            return a < b;
         }
     };
 
