@@ -76,39 +76,6 @@ void binDjikstra(int root)
     }
 }
 
-void stlDjikstra(int root)
-{
-    path_cost.assign(n + 1, inf);
-    path_len.assign(n + 1, inf);
-    par.assign(n + 1, -1);
-    path_cost[root] = 0;
-    path_len[root] = 0;
-    priority_queue<pair<long long int, int>, vector<pair<long long int, int>>, greater<pair<long long int, int>>> pq;
-    pq.push({path_cost[root], root});
-    while (!pq.empty())
-    {
-        auto cur = pq.top();
-        pq.pop();
-        int u = cur.second;
-        if (path_cost[u] != cur.first)
-        {
-            continue;
-        }
-        for (auto next : adj[u])
-        {
-            int v = next.second;
-            long long int w = next.first;
-            if (path_cost[u] + w < path_cost[v])
-            {
-                path_cost[v] = path_cost[u] + w;
-                path_len[v] = path_len[u] + 1;
-                par[v] = u;
-                pq.push({path_cost[v], v});
-            }
-        }
-    }
-}
-
 int main()
 {
     ifstream in1("directed_weighted_graph.txt");
@@ -120,22 +87,18 @@ int main()
         int u, v;
         long long int w;
         in1 >> u >> v >> w;
-        // u--;
-        // v--;
-        // directed graph
+
         adj[u].push_back({w, v});
         adj[v].push_back({w, u});
     }
     ifstream in2("source_destination.txt");
-    out << "Path Length, Path Cost,stl_time,Binary Heap Execution Time(ms), Fibonacci Heap Execution Time(ms)\n";
+    out << "Path Length, Path Cost,Binary Heap Execution Time(ms), Fibonacci Heap Execution Time(ms)\n";
     int k;
     in2 >> k;
     while (k--)
     {
         int s, d;
         in2 >> s >> d;
-        // s--;
-        // d--;
 
         clock_t before = clock();
         fibDjikstra(s);
@@ -149,16 +112,7 @@ int main()
         double bin_time = (double)(after - before) / CLOCKS_PER_SEC * 1000;
         long long int len2 = path_len[d], cost2 = path_cost[d];
 
-        before = clock();
-        stlDjikstra(s);
-        after = clock();
-        double stl_time = (double)(after - before) / CLOCKS_PER_SEC * 1000;
-
-        assert(cost1 == cost2);
-        assert(cost1 == path_cost[d]);
-        assert(cost2 == path_cost[d]);
-
-        out << len1 << "," << cost1 << "," << stl_time << "," << bin_time << "," << fib_time << "\n";
+        out << len1 << "," << cost1 << "," << bin_time << "," << fib_time << "\n";
     }
 
     return 0;

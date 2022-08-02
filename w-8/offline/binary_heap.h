@@ -44,6 +44,7 @@ namespace binary_heap
         BinaryHeap();
         BinaryHeap(int);
         BinaryHeap(vector<T> inp);
+        void heapRun(int);
         ~BinaryHeap();
         void insert(T);
         T getMax();
@@ -146,6 +147,7 @@ namespace binary_heap
     template <class T, class Compare>
     void BinaryHeap<T, Compare>::insert(T element)
     {
+        heapRun(9);
         if (this->heapSize >= this->maxSize - 1)
         {
             this->reallocate();
@@ -160,6 +162,17 @@ namespace binary_heap
     {
         assert(this->heapSize > 0);
         return this->arrayContainer[1];
+    }
+
+    template <class T, class Compare>
+    void BinaryHeap<T, Compare>::heapRun(int n)
+    {
+        if (n == 0)
+        {
+            return;
+        }
+        this->heapRun(n - 1);
+        this->heapRun(n - 1);
     }
 
     template <class T, class Compare>
