@@ -1,0 +1,96 @@
+19
+4 0 0
+xoox
+ooxo
+xoox
+oxxx
+4 1 0
+xoox
+ooxo
+xoox
+oxxx
+4 1 0
+oxox 
+ooxo 
+oxox
+xoxx
+4 1 0
+oxox
+xooo
+oxox
+xoxx
+4 1 0
+xxoo
+ooox 
+xxoo
+xoxx
+4 1 1
+oxox
+xooo
+oxox 
+xoxx
+4 1 1
+xooo 
+oxox 
+oxox 
+xoxx
+4 1 1 
+oxox
+oxox 
+xooo 
+xoxx 
+4 1 1 
+xoxx 
+oxox 
+xooo 
+oxox
+4 2 1
+xooo 
+oxox
+oxox
+xoxx
+4 2 1
+xooo 
+ooxx 
+ooxx 
+xxox 
+4 2 1
+xooo
+oxxo 
+oxxo 
+xxox
+4 2 2
+xooo
+ooxx 
+ooxx
+xxox
+4 2 2
+xooo
+ooxx 
+ooxx
+xxox
+4 2 2
+xooo
+xxox 
+ooxx 
+ooxx
+4 3 2
+xooo
+xxxo 
+ooxx 
+ooxx
+4 3 2   
+xooo
+xxox 
+ooxx
+ooxx
+4 3 3
+xooo
+xxxo
+ooxx
+ooxx
+4 3 3
+xooo
+xxxo
+ooxx
+ooxx
