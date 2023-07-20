@@ -1,6 +1,6 @@
-# CSE-208-Data-Structures-And-Algorithms-2
+# CSE208 | Data Structures and Algorithms 2 
 
-Here is the [`Course Outline.`](/assets/course_outline.pdf)
+Look up the [`course outline`](/assets/course_outline.pdf)
 
 ## Offline Assignments:
 - Week-3 | Minimum Spanning Tree
