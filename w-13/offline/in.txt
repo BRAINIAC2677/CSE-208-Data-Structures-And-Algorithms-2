@@ -1,0 +1,89 @@
+Case 1:
+
+4
+X00X
+00X0
+X00X
+0XXX
+
+Case 2:
+
+6
+0XX00X
+00X000
+XX000X
+X00XX0
+X00000
+000X00
+
+Case 3:
+
+8
+0X00000X
+0X00X000
+X00000X0
+000X000X
+00X00000
+X0000X00
+00X0X000
+000X0000
+
+Case 4:
+
+6
+X 0 0 X 0 X
+X X 0 0 X 0
+0 0 X 0 0 X
+X X X X 0 0
+X 0 0 X X X
+0 X 0 0 0 X
+
+Case 5:
+
+7
+X 0 0 X 0 X 0
+X X 0 0 X 0 X
+0 0 X 0 0 X 0
+X X X X 0 0 0
+X 0 0 X X X 0
+0 X 0 0 0 X X
+X 0 X 0 X 0 X
+
+Case 6:
+
+8
+X 0 0 X 0 X 0 0
+X X 0 0 X 0 X 0
+0 0 X 0 0 X 0 0
+X X X X 0 0 0 0
+X 0 0 X X X 0 0
+0 X 0 0 0 X X X
+X 0 X 0 X 0 X 0
+0 0 0 X 0 0 X 0
+
+Case 7:
+
+9
+X 0 0 X 0 X 0 0 0
+X X 0 0 X 0 X 0 0
+0 0 X 0 0 X 0 0 0
+X X X X 0 0 0 0 0
+X 0 0 X X X 0 0 X
+0 X 0 0 0 X X X 0
+X 0 X 0 X 0 X 0 X
+0 0 0 X 0 0 X 0 X
+0 X X 0 0 X X X 0
+
+Case 8:
+
+10
+X 0 0 X 0 X 0 0 0 X
+X X 0 0 X 0 X 0 0 X
+0 0 X 0 0 X 0 0 0 X
+X X X X 0 0 0 0 0 X
+X 0 0 X X X 0 0 X 0
+0 X 0 0 0 X X X 0 X
+X 0 X 0 X 0 X 0 X 0
+0 0 0 X 0 0 X 0 X X
+0 X X 0 0 X X X 0 0
+0 0 0 X 0 X 0 X 0 X
